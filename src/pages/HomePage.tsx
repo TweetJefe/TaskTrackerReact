@@ -24,9 +24,7 @@ const StatCard = ({ label, value, icon }: { label: string, value: number, icon: 
 export default function HomePage() {
     const { t } = useTranslation();
     const [projects, setProjects] = useState<ProjectEdge[]>([]);
-    const [pageInfo, setPageInfo] = useState({ hasNextPage: false, endCursor: null as string | null });
     const [fetching, setFetching] = useState(true);
-    const [loadingMore, setLoadingMore] = useState(false);
     const [error, setError] = useState<Error | null>(null);
     const [deletingId, setDeletingId] = useState<string | null>(null);
     
@@ -34,7 +32,6 @@ export default function HomePage() {
 
     const fetchProjects = useCallback(async (after: string | null = null) => {
         if (!after) setFetching(true);
-        else setLoadingMore(true);
 
         try {
             const result = await graphqlRequest<GetAllProjectsResponse>(GET_ALL_PROJECTS_QUERY, { 
@@ -47,13 +44,10 @@ export default function HomePage() {
             } else {
                 setProjects(result.getAllProjects.edges);
             }
-            
-            setPageInfo(result.getAllProjects.pageInfo);
         } catch (err: unknown) {
             setError(err as Error);
         } finally {
             setFetching(false);
-            setLoadingMore(false);
         }
     }, []);
 
