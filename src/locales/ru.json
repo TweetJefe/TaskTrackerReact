@@ -1,0 +1,87 @@
+{
+  "menu": {
+    "projects": "Мои проекты",
+    "calendar": "Календарь",
+    "create": "Создать проект",
+    "settings": "Настройки",
+    "main_menu": "Меню"
+  },
+  "dashboard": {
+    "title": "Дашборд",
+    "subtitle": "Панель управления проектами",
+    "stats": {
+      "total": "Всего проектов",
+      "active": "В работе",
+      "finished": "Завершено"
+    },
+    "tabs": {
+      "active": "Активные",
+      "finished": "Завершенные"
+    },
+    "empty_active": "Активных проектов нет",
+    "empty_finished": "Завершенных проектов нет",
+    "create_first": "Создать проект",
+    "load_more": "Загрузить еще"
+  },
+  "project": {
+    "status": {
+      "active": "АКТИВЕН",
+      "finished": "ЗАВЕРШЕН"
+    },
+    "back": "Назад к списку",
+    "finish_btn": "Завершить проект",
+    "resume_btn": "Возобновить проект",
+    "description": "Описание",
+    "no_description": "Описание отсутствует",
+    "assignees": "Исполнители",
+    "progress": "Прогресс проекта",
+    "completed_tasks": "{{count}} из {{total}} задач",
+    "tasks": "Задачи",
+    "new_task": "Новая задача",
+    "cancel": "Отмена",
+    "confirm_delete": "Вы уверены, что хотите удалить проект \"{{name}}\"?",
+    "confirm_finish": "Вы уверены, что хотите завершить проект? Редактирование станет недоступным.",
+    "confirm_resume": "Возобновить проект? Он снова станет доступен для редактирования.",
+    "placeholder_name": "Название проекта"
+  },
+  "task": {
+    "name": "Название задачи",
+    "description": "Описание",
+    "no_description": "Описание отсутствует",
+    "priority": "Приоритет",
+    "deadline": "Дедлайн",
+    "not_set": "Не задан",
+    "assignee": "Исполнитель",
+    "not_assigned": "Исполнитель не назначен",
+    "assign_me": "Назначить себя",
+    "assign_manually": "Назначить вручную",
+    "placeholder_username": "Напр. @username",
+    "assign_btn": "Назначить",
+    "share_link": "Отправить ссылку",
+    "status_label": "Статус",
+    "priority_levels": {
+      "low": "НИЗКИЙ",
+      "middle": "СРЕДНИЙ",
+      "high": "ВЫСОКИЙ"
+    }
+  },
+  "calendar": {
+    "title": "Календарь",
+    "subtitle": "Дедлайны задач"
+  },
+  "settings": {
+    "title": "Настройки",
+    "subtitle": "Конфигурация приложения",
+    "language": "Язык",
+    "theme": "Внешний вид",
+    "dark_mode": "Темная тема",
+    "light_mode": "Светлая тема",
+    "system_sync": "Синхронизация с Telegram"
+  },
+  "auth": {
+    "loading": "Авторизация...",
+    "error": "Ошибка: {{message}}",
+    "dev_mode": "Войти как Тестовый Пользователь (Dev Mode)",
+    "tg_only": "Приложение предназначено для запуска внутри Telegram"
+  }
+}

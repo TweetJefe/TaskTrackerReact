@@ -1,0 +1,55 @@
+:root {
+  --bg-main: var(--chakra-colors-bg-main);
+  --bg-card: var(--chakra-colors-bg-card);
+  --bg-sidebar: var(--chakra-colors-bg-sidebar);
+  --text-primary: var(--chakra-colors-fg-main);
+  --text-secondary: var(--chakra-colors-fg-muted);
+  --border-color: var(--chakra-colors-border-subtle);
+
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Стилизация скроллбаров */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--chakra-colors-fg-subtle);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--chakra-colors-fg-muted);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Fix for NativeSelect options */
+option {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}

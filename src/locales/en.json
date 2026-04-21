@@ -1,0 +1,87 @@
+{
+  "menu": {
+    "projects": "My Projects",
+    "calendar": "Calendar",
+    "create": "Create Project",
+    "settings": "Settings",
+    "main_menu": "Menu"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Project management panel",
+    "stats": {
+      "total": "Total Projects",
+      "active": "Active",
+      "finished": "Finished"
+    },
+    "tabs": {
+      "active": "Active",
+      "finished": "Finished"
+    },
+    "empty_active": "No active projects",
+    "empty_finished": "No finished projects",
+    "create_first": "Create first project",
+    "load_more": "Load more"
+  },
+  "project": {
+    "status": {
+      "active": "ACTIVE",
+      "finished": "FINISHED"
+    },
+    "back": "Back to list",
+    "finish_btn": "Finish project",
+    "resume_btn": "Resume project",
+    "description": "Description",
+    "no_description": "No description",
+    "assignees": "Assignees",
+    "progress": "Project progress",
+    "completed_tasks": "{{count}} of {{total}} tasks",
+    "tasks": "Tasks",
+    "new_task": "New task",
+    "cancel": "Cancel",
+    "confirm_delete": "Are you sure you want to delete project \"{{name}}\"?",
+    "confirm_finish": "Are you sure you want to finish the project? Editing will become unavailable.",
+    "confirm_resume": "Resume project? It will be available for editing again.",
+    "placeholder_name": "Project name"
+  },
+  "task": {
+    "name": "Task name",
+    "description": "Description",
+    "no_description": "No description",
+    "priority": "Priority",
+    "deadline": "Deadline",
+    "not_set": "Not set",
+    "assignee": "Assignee",
+    "not_assigned": "Not assigned",
+    "assign_me": "Assign me",
+    "assign_manually": "Assign manually",
+    "placeholder_username": "e.g. @username",
+    "assign_btn": "Assign",
+    "share_link": "Send invite link",
+    "status_label": "Status",
+    "priority_levels": {
+      "low": "LOW",
+      "middle": "MIDDLE",
+      "high": "HIGH"
+    }
+  },
+  "calendar": {
+    "title": "Calendar",
+    "subtitle": "Task deadlines"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Application configuration",
+    "language": "Language",
+    "theme": "Appearance",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode",
+    "system_sync": "Sync with Telegram"
+  },
+  "auth": {
+    "loading": "Authorization...",
+    "error": "Error: {{message}}",
+    "dev_mode": "Enter as Test User (Dev Mode)",
+    "tg_only": "App is designed to run inside Telegram"
+  }
+}

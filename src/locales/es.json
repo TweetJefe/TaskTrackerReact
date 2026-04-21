@@ -1,0 +1,87 @@
+{
+  "menu": {
+    "projects": "Mis Proyectos",
+    "calendar": "Calendario",
+    "create": "Crear Proyecto",
+    "settings": "Ajustes",
+    "main_menu": "Menú"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "subtitle": "Panel de gestión de proyectos",
+    "stats": {
+      "total": "Proyectos Totales",
+      "active": "En curso",
+      "finished": "Terminado"
+    },
+    "tabs": {
+      "active": "Activos",
+      "finished": "Terminados"
+    },
+    "empty_active": "No hay proyectos activos",
+    "empty_finished": "No hay proyectos terminados",
+    "create_first": "Crear primer proyecto",
+    "load_more": "Cargar más"
+  },
+  "project": {
+    "status": {
+      "active": "ACTIVO",
+      "finished": "TERMINADO"
+    },
+    "back": "Volver a la lista",
+    "finish_btn": "Terminar proyecto",
+    "resume_btn": "Reanudar proyecto",
+    "description": "Descripción",
+    "no_description": "Sin descripción",
+    "assignees": "Responsables",
+    "progress": "Progreso del proyecto",
+    "completed_tasks": "{{count}} de {{total}} tareas",
+    "tasks": "Tareas",
+    "new_task": "Nueva tarea",
+    "cancel": "Cancelar",
+    "confirm_delete": "¿Estás seguro de que quieres eliminar el proyecto \"{{name}}\"?",
+    "confirm_finish": "¿Estás seguro de que quieres terminar el proyecto? La edición ya no estará disponible.",
+    "confirm_resume": "¿Reanudar proyecto? Estará disponible para editar de nuevo.",
+    "placeholder_name": "Nombre del proyecto"
+  },
+  "task": {
+    "name": "Nombre de la tarea",
+    "description": "Descripción",
+    "no_description": "Sin descripción",
+    "priority": "Prioridad",
+    "deadline": "Plazo",
+    "not_set": "No establecido",
+    "assignee": "Responsable",
+    "not_assigned": "No asignado",
+    "assign_me": "Asignarme a mí",
+    "assign_manually": "Asignar manualmente",
+    "placeholder_username": "ej. @usuario",
+    "assign_btn": "Asignar",
+    "share_link": "Enviar enlace de invitación",
+    "status_label": "Estado",
+    "priority_levels": {
+      "low": "BAJA",
+      "middle": "MEDIA",
+      "high": "ALTA"
+    }
+  },
+  "calendar": {
+    "title": "Calendario",
+    "subtitle": "Plazos de tareas"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "subtitle": "Configuración de la aplicación",
+    "language": "Idioma",
+    "theme": "Apariencia",
+    "dark_mode": "Modo Oscuro",
+    "light_mode": "Modo Claro",
+    "system_sync": "Sincronizar con Telegram"
+  },
+  "auth": {
+    "loading": "Autorizando...",
+    "error": "Error: {{message}}",
+    "dev_mode": "Entrar como Usuario de Prueba (Dev Mode)",
+    "tg_only": "La aplicación está diseñada para ejecutarse dentro de Telegram"
+  }
+}
