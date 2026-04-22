@@ -45,17 +45,26 @@ export const GET_PROJECT_QUERY = `
       startedAt
       updatedAt
       tasks {
-        id
-        name
-        description
-        status
-        priority
-        projectId
-        assigneeId
-        reporterId
-        createdAt
-        updatedAt
-        deadLine
+        edges {
+          node {
+            id
+            name
+            description
+            status
+            priority
+            projectId
+            assigneeId
+            reporterId
+            createdAt
+            updatedAt
+            deadLine
+          }
+          cursor
+        }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
       }
     }
   }

@@ -42,7 +42,7 @@ export default function TaskPage() {
         try {
             const result = await graphqlRequest<GetProjectResponse>(GET_PROJECT_QUERY, { id: projectId });
             const project = result.getProjectById;
-            const foundTask = project?.tasks?.find(task => task.id === taskId);
+            const foundTask = project?.tasks?.edges.find(edge => edge.node.id === taskId)?.node;
             
             if (project?.assignees) {
                 setProjectAssignees(project.assignees.filter((u): u is string => !!u));

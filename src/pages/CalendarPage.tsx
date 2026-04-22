@@ -17,11 +17,15 @@ const GET_CALENDAR_DATA_QUERY = `
           id
           name
           tasks {
-            id
-            name
-            status
-            priority
-            deadLine
+            edges {
+              node {
+                id
+                name
+                status
+                priority
+                deadLine
+              }
+            }
           }
         }
       }
@@ -64,8 +68,9 @@ export default function CalendarPage() {
             if (result && result.getAllProjects && result.getAllProjects.edges) {
                 result.getAllProjects.edges.forEach(edge => {
                     const project = edge.node;
-                    if (project.tasks) {
-                        project.tasks.forEach(task => {
+                    if (project.tasks && project.tasks.edges) {
+                        project.tasks.edges.forEach(taskEdge => {
+                            const task = taskEdge.node;
                             if (task.deadLine) {
                                 allTasks.push({
                                     ...task,

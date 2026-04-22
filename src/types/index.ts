@@ -35,7 +35,7 @@ export interface Project {
     status?: ProjectStatus | null;
     startedAt?: string | null;
     updatedAt?: string | null;
-    tasks?: Task[] | null;
+    tasks?: TaskConnection | null;
 }
 
 export interface PageInfo {

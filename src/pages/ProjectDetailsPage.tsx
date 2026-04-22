@@ -207,8 +207,9 @@ export default function ProjectDetailsPage() {
         </Box>
     );
 
-    const doneTasks = project.tasks?.filter(t => t.status === 'DONE').length || 0;
-    const totalTasks = project.tasks?.length || 0;
+    const tasks = project.tasks?.edges.map(edge => edge.node) || [];
+    const doneTasks = tasks.filter(t => t.status === 'DONE').length || 0;
+    const totalTasks = tasks.length || 0;
     const progress = totalTasks > 0 ? Math.round((doneTasks / totalTasks) * 100) : 0;
     const isFinished = project.status === 'FINISHED';
 
@@ -373,8 +374,8 @@ export default function ProjectDetailsPage() {
                     )}
 
                     <VStack gap={4} align="stretch">
-                        {project.tasks && project.tasks.length > 0 ? (
-                            project.tasks.map((task) => (
+                        {tasks.length > 0 ? (
+                            tasks.map((task) => (
                                 <Box key={task.id} p={5} bg="bg.card" borderWidth="1px" borderColor="border.subtle" borderRadius="2xl" _hover={{ borderColor: "border.strong", transform: "translateX(4px)" }} transition="all 0.2s" cursor="pointer" onClick={() => navigate(`/project/${id}/task/${task.id}`)}>
                                     <Flex justify="space-between" align="center">
                                         <Box flex="1">
