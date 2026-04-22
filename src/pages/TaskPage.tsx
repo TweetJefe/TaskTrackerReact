@@ -46,8 +46,9 @@ export default function TaskPage() {
             
             if (project?.assignees) {
                 const usernames = project.assignees
-                    .filter((u): u is { username: string } => !!u && !!u.username)
-                    .map(u => u.username);
+                    .filter(u => u !== null && u !== undefined)
+                    .map(u => u!.username)
+                    .filter((name): name is string => !!name);
                 setProjectAssignees(usernames);
             }
 
