@@ -45,7 +45,10 @@ export default function TaskPage() {
             const foundTask = project?.tasks?.edges.find(edge => edge.node.id === taskId)?.node;
             
             if (project?.assignees) {
-                setProjectAssignees(project.assignees.filter((u): u is string => !!u));
+                const usernames = project.assignees
+                    .filter((u): u is { username: string } => !!u && !!u.username)
+                    .map(u => u.username);
+                setProjectAssignees(usernames);
             }
 
             if (foundTask) {
