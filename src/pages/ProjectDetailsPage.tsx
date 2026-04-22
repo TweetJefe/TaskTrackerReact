@@ -295,7 +295,9 @@ export default function ProjectDetailsPage() {
                                     <Text fontWeight="bold" color="fg.subtle" textTransform="uppercase" fontSize="xs" mb={2} letterSpacing="wider">{t('project.assignees')}</Text>
                                     <HStack gap={2} wrap="wrap">
                                         {project.assignees.map((assignee, idx) => (
-                                            <Badge key={idx} variant="outline" colorPalette="gray" borderRadius="md" color="fg.muted">{assignee}</Badge>
+                                            <Badge key={idx} variant="outline" colorPalette="gray" borderRadius="md" color="fg.muted">
+                                                {assignee?.username || 'Unknown'}
+                                            </Badge>
                                         ))}
                                     </HStack>
                                 </Box>

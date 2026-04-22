@@ -23,11 +23,13 @@ apiClient.interceptors.request.use(
 );
 
 export const graphqlRequest = async <T>(query: string, variables: Record<string, unknown> = {}) => {
+  console.log('GraphQL Request:', { query, variables });
   try {
     const response = await apiClient.post('', {
       query,
       variables,
     });
+    console.log('GraphQL Response:', response.data);
 
     if (response.data.errors) {
       const error = new Error(response.data.errors[0].message);
