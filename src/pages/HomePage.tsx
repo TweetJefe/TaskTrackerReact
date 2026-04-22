@@ -33,11 +33,11 @@ export default function HomePage() {
     const fetchProjects = useCallback(async (after: string | null = null) => {
         if (!after) setFetching(true);
 
+        const variables: any = { first: 50 };
+        if (after) variables.after = after;
+
         try {
-            const result = await graphqlRequest<GetAllProjectsResponse>(GET_ALL_PROJECTS_QUERY, { 
-                first: 50,
-                after 
-            });
+            const result = await graphqlRequest<GetAllProjectsResponse>(GET_ALL_PROJECTS_QUERY, variables);
             
             if (after) {
                 setProjects(prev => [...prev, ...result.getAllProjects.edges]);

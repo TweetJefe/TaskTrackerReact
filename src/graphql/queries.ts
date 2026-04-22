@@ -17,16 +17,10 @@ export const GET_ALL_PROJECTS_QUERY = `
           name
           description
           status
-          assignees
-          reporterId
-          startedAt
-          updatedAt
         }
       }
       pageInfo {
         hasNextPage
-        hasPreviousPage
-        startCursor
         endCursor
       }
     }
