@@ -30,7 +30,7 @@ export interface Project {
     id: string;
     name: string;
     description?: string | null;
-    assignees?: (User | null)[];
+    assignees?: (string | null)[];
     reporterId: string;
     status?: ProjectStatus | null;
     startedAt?: string | null;

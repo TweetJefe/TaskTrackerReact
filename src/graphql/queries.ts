@@ -17,9 +17,7 @@ export const GET_ALL_PROJECTS_QUERY = `
           name
           description
           status
-          assignees {
-            username
-          }
+          assignees
           reporterId
           startedAt
           updatedAt
@@ -42,9 +40,7 @@ export const GET_PROJECT_QUERY = `
       name
       description
       status
-      assignees {
-        username
-      }
+      assignees
       reporterId
       startedAt
       updatedAt

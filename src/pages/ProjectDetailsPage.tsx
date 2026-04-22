@@ -296,7 +296,7 @@ export default function ProjectDetailsPage() {
                                     <HStack gap={2} wrap="wrap">
                                         {project.assignees.map((assignee, idx) => (
                                             <Badge key={idx} variant="outline" colorPalette="gray" borderRadius="md" color="fg.muted">
-                                                {assignee?.username || 'Unknown'}
+                                                {assignee}
                                             </Badge>
                                         ))}
                                     </HStack>
