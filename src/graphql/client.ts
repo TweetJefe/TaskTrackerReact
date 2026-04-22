@@ -1,21 +1,32 @@
 import axios from 'axios';
 
+const GQL_URL = import.meta.env.VITE_API_URL;
 
-const GQL_URL = import.meta.env.VITE_API_URL; 
+const apiClient = axios.create({
+  baseURL: GQL_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
 
+apiClient.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export const graphqlRequest = async <T>(query: string, variables: Record<string, unknown> = {}) => {
-  const token = localStorage.getItem('token');
-  
   try {
-    const response = await axios.post(GQL_URL, {
+    const response = await apiClient.post('', {
       query,
       variables,
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-        ...(token ? { 'Authorization': `Bearer ${token}` } : {}),
-      },
     });
 
     if (response.data.errors) {
@@ -27,10 +38,10 @@ export const graphqlRequest = async <T>(query: string, variables: Record<string,
     return response.data.data as T;
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
-      
       if (error.response?.status === 401) {
         localStorage.removeItem('token');
         localStorage.removeItem('userId');
+        localStorage.removeItem('username');
         window.location.href = '/';
       }
       throw new Error(error.response?.data?.message || error.message);
